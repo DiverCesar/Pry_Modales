@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Modales</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link href="./public/style.css" rel="stylesheet" />
+    <link rel="icon" href="https://png.pngtree.com/png-vector/20240930/ourmid/pngtree-retro-neon-video-game-controller-png-image_13929194.png" />
+  </head>
+  <body class="bg-black text-white">
+    <div class="p-6 space-y-4 text-center">
+      <h1 class="text-4xl font-bold neon-text">FORMULARIOS MODALES</h1>
+      <div class="flex flex-wrap justify-center gap-4">
+        <button
+          data-modal-target="modal-sum"
+          data-modal-toggle="modal-sum"
+          class="btn btn-sum"
+        >
+          Suma
+        </button>
+        <button
+          data-modal-target="modal-mul"
+          data-modal-toggle="modal-mul"
+          class="btn btn-mul"
+        >
+          Tabla
+        </button>
+        <button
+          data-modal-target="modal-par"
+          data-modal-toggle="modal-par"
+          class="btn btn-par"
+        >
+          Par / Impar
+        </button>
+        <button
+          data-modal-target="modal-age"
+          data-modal-toggle="modal-age"
+          class="btn btn-age"
+        >
+          Calcular Edad
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="modal-sum"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed inset-0 flex items-center justify-center z-50 hidden"
+    >
+      <div class="modal-overlay absolute inset-0 bg-black/60"></div>
+      <div
+        class="modal-content relative bg-gray-900 rounded-xl shadow-lg w-11/12 max-w-md p-6"
+      >
+        <button
+          type="button"
+          data-modal-hide="modal-sum"
+          class="absolute top-3 right-3 text-gray-400 hover:text-white"
+          style="position: absolute; top:5px; right:15px; font-size:x-large;"
+        >
+          ×
+        </button>
+        <h3 class="text-2xl font-semibold neon-text mb-4">
+          Suma de dos números
+        </h3>
+        <form id="form-sum" class="space-y-4">
+          <div>
+            <label>Número 1</label>
+            <input
+              name="a"
+              type="number"
+              required
+              class="w-full p-2 rounded cyber-input"
+            />
+          </div>
+          <div>
+            <label>Número 2</label>
+            <input
+              name="b"
+              type="number"
+              required
+              class="w-full p-2 rounded cyber-input"
+            />
+          </div>
+          <button type="submit" class="w-full py-2 rounded neon-btn">
+            Enviar
+          </button>
+        </form>
+        <div id="result-sum" class="mt-4"></div>
+      </div>
+    </div>
+
+    <div
+      id="modal-mul"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed inset-0 flex items-center justify-center z-50 hidden"
+    >
+      <div class="modal-overlay absolute inset-0 bg-black/60"></div>
+      <div
+        class="modal-content relative bg-gray-900 rounded-xl shadow-lg w-11/12 max-w-md p-6"
+      >
+        <button
+          type="button"
+          data-modal-hide="modal-mul"
+          class="absolute top-3 right-3 text-gray-400 hover:text-white"
+          style="position: absolute; top:5px; right:15px; font-size:x-large;"
+        >
+          ×
+        </button>
+        <h3 class="text-2xl font-semibold neon-text mb-4">
+          Tabla de Multiplicar
+        </h3>
+        <form id="form-mul" class="space-y-4">
+          <div>
+            <label>Número</label>
+            <input
+              name="n"
+              type="number"
+              required
+              class="w-full p-2 rounded cyber-input"
+            />
+          </div>
+          <button type="submit" class="w-full py-2 rounded neon-btn">
+            Enviar
+          </button>
+        </form>
+        <div id="result-mul" class="mt-4"></div>
+      </div>
+    </div>
+
+    <div
+      id="modal-par"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed inset-0 flex items-center justify-center z-50 hidden"
+    >
+      <div class="modal-overlay absolute inset-0 bg-black/60"></div>
+      <div
+        class="modal-content relative bg-gray-900 rounded-xl shadow-lg w-11/12 max-w-md p-6"
+      >
+        <button
+          type="button"
+          data-modal-hide="modal-par"
+          class="absolute top-3 right-3 text-gray-400 hover:text-white"
+          style="position: absolute; top:5px; right:15px; font-size:x-large;"
+        >
+          ×
+        </button>
+        <h3 class="text-2xl font-semibold neon-text mb-4">Par o Impar</h3>
+        <form id="form-par" class="space-y-4">
+          <div>
+            <label>Número</label>
+            <input
+              name="n"
+              type="number"
+              required
+              class="w-full p-2 rounded cyber-input"
+            />
+          </div>
+          <button type="submit" class="w-full py-2 rounded neon-btn">
+            Enviar
+          </button>
+        </form>
+        <div id="result-par" class="mt-4"></div>
+      </div>
+    </div>
+
+    <div
+      id="modal-age"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed inset-0 flex items-center justify-center z-50 hidden"
+    >
+      <div class="modal-overlay absolute inset-0 bg-black/60"></div>
+      <div
+        class="modal-content relative bg-gray-900 rounded-xl shadow-lg w-11/12 max-w-md p-6"
+      >
+        <button
+          type="button"
+          data-modal-hide="modal-age"
+          class="absolute top-3 right-3 text-gray-400 hover:text-white"
+          style="position: absolute; top:5px; right:15px; font-size:x-large;"
+        >
+          ×
+        </button>
+        <h3 class="text-2xl font-semibold neon-text mb-4">Calcular Edad</h3>
+        <form id="form-age" class="space-y-4">
+          <div>
+            <label>Año de nacimiento</label>
+            <input
+              name="year"
+              type="number"
+              min="1925"
+              max="2025"
+              required
+              class="w-full p-2 rounded cyber-input"
+              oninvalid="this.setCustomValidity('Año no válido')"
+              oninput="this.setCustomValidity('')"
+            />
+            <div class="text-red-500 text-sm mt-1" id="msg-age"></div>
+          </div>
+          <button type="submit" class="w-full py-2 rounded neon-btn">
+            Enviar
+          </button>
+        </form>
+        <div id="result-age" class="mt-4"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script>
+      const forms = [
+        { id: "form-sum", result: "result-sum" },
+        { id: "form-mul", result: "result-mul" },
+        { id: "form-par", result: "result-par" },
+        { id: "form-age", result: "result-age" },
+      ];
+
+      forms.forEach((cfg) => {
+        const form = document.getElementById(cfg.id);
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const data = new FormData(form);
+          data.append("operation", cfg.id.split("-")[1]);
+          fetch("public/procesar.php", { method: "POST", body: data })
+            .then((resultado) => resultado.text())
+            .then((txt) => {
+              document.getElementById(cfg.result).innerHTML = txt;
+              form.reset();
+            })
+            .catch(console.error);
+        });
+      });
+    </script>
+  </body>
+</html>
